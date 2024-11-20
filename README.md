@@ -3,6 +3,6 @@
 # Emotional Landscapes: Mapping Urban Park Sentiments Using Natural Language Processing
 
 - Xia Guo (Upenn)
-- Eric Delmelle (Drexel, Penn)
+- Eric Delmelle (Drexel, UPenn)
 
-- [**presentation**](https://github.com/ericdelmelle/introToQuarto)
+- [**presentation**](https://ericdelmelle.github.io/emotionalLandscape/)
