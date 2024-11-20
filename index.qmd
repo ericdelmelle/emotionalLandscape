@@ -73,6 +73,7 @@ knitr::opts_chunk$set(fig.retina = 1)
 <br>
 - However, 
   - can we capture public sentiment on park use and perceptions (?)
+  <br>
   - is social media representative (!?)
 
 
@@ -82,9 +83,9 @@ knitr::opts_chunk$set(fig.retina = 1)
   - in the context of parks, it helps to understand visitor behavior and preferences
   
 <br>
- - sentiment and emotion analysis in urban spaces
-  - natural language processing [NLP] is increasingly used to interpret text data 
-  - derive public sentiment and emotional insights
+- sentiment and emotion analysis in urban spaces
+- natural language processing [NLP] is increasingly used to interpret text data 
+- derive public sentiment and emotional insights
 
 <br>
 ![ ](images/huggingFace.png){.center width=50%} 
