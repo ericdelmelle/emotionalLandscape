@@ -1,0 +1,250 @@
+---
+title: "Emotional Landscapes: Mapping Urban Park Sentiments Using Natural Language Processing"
+authors:
+  - id: ericdelmelle 
+    name:
+      given: Eric
+      family: Delmelle
+      literal: Xia Guo (Penn) and Eric Delmelle (Drexel, Penn)
+    url: https://github.com/ericdelmelle
+    email: 
+    orcid: 0000-0002-5117-2238
+    attributes:
+      corresponding: boolean
+      equal-contributor: true
+date: "2024-11-20"
+date-format: long
+from: markdown+emoji
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    preview-links: auto
+    transition: none
+    transition-speed: fast
+    slide-number: "c/t"
+    link-external-newwindow: true
+    overview: true
+    menu: true
+    chalkboard: true
+    mutliplex: false
+---
+
+```{r setup, include = FALSE}
+# Set global chunk options to control resolution
+knitr::opts_chunk$set(fig.retina = 1)
+```
+
+
+
+## Motivation:
+
+::: {.columns}
+::: {.column width="50%" style="padding-top: 20px;"}
+- **Role of Urban Parks:**  
+  - promoting *physical* activity  
+  - reducing *mental* health issues  
+  - offering a space for *community* engagement  
+
+<br>
+
+- **Public Health Impact:**  
+  - green spaces reduce *stress*  
+  - mitigate *urban heat*  
+  - improve *air quality*  
+:::
+
+::: {.column width="50%" style="padding-top: 0; text-align: center;"}
+![example of two extreme parks (from ChatGPT)](images/parkexample.png){.center}
+:::
+:::
+
+
+
+## Motivation:
+- Limitations of Traditional Surveys 
+  - resource-intensive, time-consuming
+  - results can become quickly outdated
+
+<br>
+
+- Leveraging Social Media Data
+  - `real-time`
+  - cost-effective
+  - extensive data 
+
+<br>
+- However, 
+  - can we capture public sentiment on park use and perceptions (?)
+  - is social media representative (!?)
+
+
+## Relevant Work 
+- Social Media in Urban Studies
+  - Google Reviews, Twitter, and Instagram could be valuable data sources in urban research
+  - in the context of parks, it helps to understand visitor behavior and preferences
+  
+<br>
+ - sentiment and emotion analysis in urban spaces
+  - natural language processing [NLP] is increasingly used to interpret text data 
+  - derive public sentiment and emotional insights
+
+<br>
+![ ](images/huggingFace.png){.center width=50%} 
+  
+
+## Research Questions
+
+- What are the temporal, functional and spatial trends in emotional sentiments and visitation patterns at urban parks?
+<br>
+- What are the features frequently mentioned in reviews for different park visiting emotions?
+<br>
+
+- **Methodology**: NLP algorithm to detect emotions
+- **Data**: Google Reviews scraped for all parks in Philadelphia
+
+
+
+## Methodology
+
+::: {.columns}
+::: {.column width="50%" style="padding-top: 20px;"}
+- **Sentiment Analysis**  
+  - *Hugging Face*’s NLP transformer models were used to classify sentiment as positive or negative
+<br>
+- **Emotion Analysis**
+  - Categorize emotions into six types **Inspiration**, **Relaxation**, **Engagement**, **Discovery**, **Frustration & Annoyance**, and **Sorrow**
+<br>
+- **Data Processing**
+  - Emotions categorized using `K-means` clustering to identify meaningful groups
+:::
+
+::: {.column width="50%" style="padding-top: 0; text-align: center;"}
+![](images/methodology.png){.center}
+:::
+:::
+
+
+
+## Data
+
+- **Source**  
+  - *Google Reviews* for Philadelphia parks, covering data from 2016 to 2024
+<br>
+- **Data Preparation**
+  - Scraping with Outscraper, data cleaning and integration with PPR to remove duplicates and ensure accuracyw
+<br>
+- **Review Filtering**
+  - Only parks with over 25 reviews were analyzed, resulting in a sample of 92 parks and over 37,000 reviews
+<br>
+
+## Data: spatial distribution of reviews
+![](images/numReviews.png){.center}
+
+## Data: temporal distribution (1)
+![](images/reviewMonth.png){.center}
+
+## Data: temporal distribution (2)
+![](images/reviewSeason.png){.center}
+
+## Data: What do these reviews look like?
+
+![snapshot of reviews for Wissahickon Valley Park](images/Wiss.png){.center}
+
+## Data: example from a frequent (?) contributor
+
+![Review from Anna K.](images/AnnaK.png){.center width=100%} 
+
+## Data: example from a less frequent (?) contributor
+
+![Review from Miranda Burg](images/MirandaBurg.png){.center width=50%} 
+
+
+## Sentiment Analysis
+
+- **Sentiment Scoring Approach**  
+  - each review assigned a sentiment score (0-1 scale) and a sentiment label (positive / negative)
+  - scores close to 0 indicating more neutral sentiment and scores near 1 indicating stronger sentiment
+
+
+- **Example**
+  - “Unfortunately this park is not what it used to be the area has become a known high traffic drug area but there is police getting the areas trying to do what they can but has a lot of work to go would not recommend taking your dog are children here lot of used syringes everywhere especially on the park in Grass area”  -  **negative 0.97**
+
+
+![Distilbert](images/distilbert.png){.center}
+
+## Temporal variation of sentiment scores
+
+![](images/sentimentScores.png){.center width=50%} 
+
+## Aggregated scores per park
+
+![](images/sentimentPerPark.png){.center} 
+
+## Emotion Analysis (1)
+
+- **Plutchik model**  
+
+<br>
+
+- **Emotion Categorization Process**  
+  - pretrained model from Hugging Face (“`roberta-base-go_emotions`”)
+  - classify reviews into a broader range of emotions
+
+
+![](images/plutchik.png){.center} 
+
+
+
+## Emotion Analysis (2)
+
+![](images/emotionExample.png){.center} 
+
+## Emotion Analysis (3)
+![](images/emotionExample2.png){.center} 
+
+
+## Emotion breakdown per park type 
+![](images/emotionPerParkFunction.png){.center} 
+
+## Emotion mapping: discovery and sorrow 
+
+![](images/emotionDistribution1.png){.center} 
+
+
+## Emotion mapping: frustration & annoyance, inspiration 
+
+![](images/emotionDistribution2.png){.center} 
+
+## Discussion and Limitations (1)
+ 
+- **Representativeness**
+  - reviews may not capture the full demographic spectrum 
+  - overrepresentation of younger or tech-savvy individuals
+
+<br>
+
+- **Temporal Bias**
+  - reviews are not always posted immediately after visits, potentially diluting real-time sentiment
+  
+<br>
+
+- **Single Platform Limitation** 
+  - using only Google Reviews could introduce bias 
+  - combining with data from other platforms (e.g., Instagram) may yield a broader picture
+
+## Discussion and Limitations (2)
+
+- **Ethical Considerations** 
+  - Data was collected with respect to privacy, without identifying individual reviewers
+  
+<br>
+
+- **Contributor Weight/Reliability** 
+  - reliability of sentiment may vary between platform "super contributors," who post frequently and may have a more balanced perspective, versus casual users who leave only one or two reviews 
+
+
+## :pray:
+![](images/closingSlide.png){.center}
+
+
+
