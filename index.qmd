@@ -5,7 +5,7 @@ authors:
     name:
       given: Eric
       family: Delmelle
-      literal: Xia Guo (Penn) and Eric Delmelle (Drexel, Penn)
+      literal: Xia Gao (Penn) and Eric Delmelle (Drexel, Penn)
     url: https://github.com/ericdelmelle
     orcid: 0000-0002-5117-2238
     attributes:
