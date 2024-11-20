@@ -7,10 +7,8 @@ authors:
       family: Delmelle
       literal: Xia Guo (Penn) and Eric Delmelle (Drexel, Penn)
     url: https://github.com/ericdelmelle
-    email: 
     orcid: 0000-0002-5117-2238
     attributes:
-      corresponding: boolean
       equal-contributor: true
 date: "2024-11-20"
 date-format: long
@@ -26,7 +24,7 @@ format:
     overview: true
     menu: true
     chalkboard: true
-    mutliplex: false
+    multiplex: false
 ---
 
 ```{r setup, include = FALSE}
