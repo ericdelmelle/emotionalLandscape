@@ -71,6 +71,7 @@ knitr::opts_chunk$set(fig.retina = 1)
   - extensive data 
 
 <br>
+
 - However, 
   - can we capture public sentiment on park use and perceptions (?)
   <br>
@@ -83,6 +84,7 @@ knitr::opts_chunk$set(fig.retina = 1)
   - in the context of parks, it helps to understand visitor behavior and preferences
   
 <br>
+
 - sentiment and emotion analysis in urban spaces
 - natural language processing [NLP] is increasingly used to interpret text data 
 - derive public sentiment and emotional insights

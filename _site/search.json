@@ -11,14 +11,14 @@
     "href": "index.html#motivation-1",
     "title": "Emotional Landscapes: Mapping Urban Park Sentiments Using Natural Language Processing",
     "section": "Motivation:",
-    "text": "Motivation:\n\nLimitations of Traditional Surveys\n\nresource-intensive, time-consuming\nresults can become quickly outdated\n\n\n\n\nLeveraging Social Media Data\n\nreal-time\ncost-effective\nextensive data\n\n\n - However, - can we capture public sentiment on park use and perceptions (?)  - is social media representative (!?)"
+    "text": "Motivation:\n\nLimitations of Traditional Surveys\n\nresource-intensive, time-consuming\nresults can become quickly outdated\n\n\n\n\nLeveraging Social Media Data\n\nreal-time\ncost-effective\nextensive data\n\n\n\n\nHowever,\n\ncan we capture public sentiment on park use and perceptions (?) \nis social media representative (!?)"
   },
   {
     "objectID": "index.html#relevant-work",
     "href": "index.html#relevant-work",
     "title": "Emotional Landscapes: Mapping Urban Park Sentiments Using Natural Language Processing",
     "section": "Relevant Work",
-    "text": "Relevant Work\n\nSocial Media in Urban Studies\n\nGoogle Reviews, Twitter, and Instagram could be valuable data sources in urban research\nin the context of parks, it helps to understand visitor behavior and preferences\n\n\n - sentiment and emotion analysis in urban spaces - natural language processing [NLP] is increasingly used to interpret text data - derive public sentiment and emotional insights"
+    "text": "Relevant Work\n\nSocial Media in Urban Studies\n\nGoogle Reviews, Twitter, and Instagram could be valuable data sources in urban research\nin the context of parks, it helps to understand visitor behavior and preferences\n\n\n\n\nsentiment and emotion analysis in urban spaces\nnatural language processing [NLP] is increasingly used to interpret text data\nderive public sentiment and emotional insights"
   },
   {
     "objectID": "index.html#research-questions",
